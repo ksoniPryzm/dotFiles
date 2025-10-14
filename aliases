@@ -1,0 +1,46 @@
+# File system
+alias ls='eza -lh --group-directories-first --icons=auto'
+alias cat='batcat'
+alias bat='batcat'
+#alias ll ='ls -l'
+alias lsa='ls -a'
+alias lt='eza --tree --level=2 --long --icons --git'
+alias lta='lt -a'
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
+alias cd="zd"
+zd() {
+  if [ $# -eq 0 ]; then
+    builtin cd ~ && return
+  elif [ -d "$1" ]; then
+    builtin cd "$1"
+  else
+    z "$@" && printf "\U000F17A9 " && pwd || echo "Error: Directory not found"
+  fi
+}
+open() {
+  xdg-open "$@" >/dev/null 2>&1 &
+}
+
+# Directories
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+# Tools
+alias d='docker'
+alias r='rails'
+n() { if [ "$#" -eq 0 ]; then nvim .; else nvim "$@"; fi; }
+
+# Git
+alias g='git'
+alias gcm='git commit -m'
+alias gcam='git commit -a -m'
+alias gcad='git commit -a --amend'
+
+# Kubectl
+alias k='kubectl '
+alias be-logs='k logs  -l app.kubernetes.io/name=prydai -c prydai --follow'
+alias fe-logs='k logs  -l app.kubernetes.io/name=prydai-fe -c prydai-fe --follow'
+alias k-login='tsh kube login --auth=ad --proxy=https://teleport-usgc-1.palantirfedstart.com:3080 chupalla-production'
+alias kgpo='kubectl  get pods'
+

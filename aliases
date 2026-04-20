@@ -1,7 +1,7 @@
 # File system
 alias ls='eza -lh --group-directories-first --icons=auto'
-alias cat='batcat'
-alias bat='batcat'
+alias cat='cat'
+alias bat='bat'
 #alias ll ='ls -l'
 alias lsa='ls -a'
 alias lt='eza --tree --level=2 --long --icons --git'

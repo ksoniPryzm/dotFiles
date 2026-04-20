@@ -1,0 +1,5 @@
+brew "bat"
+brew "eza"
+brew "starship"
+brew "zoxide"
+cask "font-hack-nerd-font"

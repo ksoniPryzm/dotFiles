@@ -39,8 +39,8 @@ alias gcad='git commit -a --amend'
 
 # Kubectl
 alias k='kubectl '
-alias be-logs='k logs  -l app.kubernetes.io/name=prydai -c prydai --follow'
-alias fe-logs='k logs  -l app.kubernetes.io/name=prydai-fe -c prydai-fe --follow'
-alias k-login='tsh kube login --auth=ad --proxy=https://teleport-usgc-1.palantirfedstart.com:3080 chupalla-production'
+#alias be-logs='k logs  -l app.kubernetes.io/name=prydai -c prydai --follow'
+#alias fe-logs='k logs  -l app.kubernetes.io/name=prydai-fe -c prydai-fe --follow'
+#alias k-login='tsh kube login --auth=ad --proxy=https://teleport-usgc-1.palantirfedstart.com:3080 chupalla-production'
 alias kgpo='kubectl  get pods'
 

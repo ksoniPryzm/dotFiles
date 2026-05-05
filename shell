@@ -4,8 +4,8 @@ HISTCONTROL=ignoreboth
 HISTSIZE=32768
 HISTFILESIZE="${HISTSIZE}"
 
-# Autocompletion
-if [[ ! -v BASH_COMPLETION_VERSINFO && -f /usr/share/bash-completion/bash_completion ]]; then
+# Autocompletion (Linux only — macOS handles this via .bash_profile/Homebrew)
+if [[ -z "${BASH_COMPLETION_VERSINFO+x}" && -f /usr/share/bash-completion/bash_completion ]]; then
   source /usr/share/bash-completion/bash_completion
 fi
 

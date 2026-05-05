@@ -10,9 +10,6 @@ DOTFILES="$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")"
 # Environment variables
 source "$DOTFILES/envs"
 
-# Shell settings (history, PATH, completion)
-source "$DOTFILES/shell"
-
 # --- oh-my-bash ---
 export OSH="$HOME/.oh-my-bash"
 OSH_THEME="powerline"
@@ -39,6 +36,9 @@ fi
 
 source "$OSH/oh-my-bash.sh"
 # ------------------
+
+# Shell settings (history, PATH, completion)
+source "$DOTFILES/shell"
 
 # Homebrew
 export PATH="/opt/homebrew/bin:$PATH"

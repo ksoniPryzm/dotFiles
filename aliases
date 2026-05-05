@@ -2,8 +2,11 @@
 alias ls='eza -lh --group-directories-first --icons=auto'
 alias cat='batcat'
 alias bat='batcat'
+alias o='nvim'
+alias reload='source ~/.bashrc'
 #alias ll ='ls -l'
-alias lsa='ls -a'
+alias ls='eza --icons=auto'
+alias lsa='eza -la --icons=auto'
 alias lt='eza --tree --level=2 --long --icons --git'
 alias lta='lt -a'
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
@@ -28,11 +31,15 @@ alias ....='cd ../../..'
 
 # Tools
 alias d='docker'
+alias dbx='docker buildx build'
 alias r='rails'
 n() { if [ "$#" -eq 0 ]; then nvim .; else nvim "$@"; fi; }
 
 # Git
 alias g='git'
+alias gch='git checkout'
+alias gpl='git pull'
+alias ga='git add'
 alias gcm='git commit -m'
 alias gcam='git commit -a -m'
 alias gcad='git commit -a --amend'

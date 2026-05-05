@@ -1,3 +1,4 @@
+.bashrc|symlink|
 #.Xresources|symlink|
 .tmux.conf|symlink|
 .vimrc|symlink|
